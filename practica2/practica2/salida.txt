@@ -1,0 +1,22 @@
+javac -g aux.java Barbero.java ContadorDias.java Fumador.java LectorEscritor.java ProductorConsumidorHoare.java ProductorConsumidor.java
+java MainBarbero 10
+El Cliente 2 en espera
+El Cliente 1 en espera
+El Cliente 0 en espera
+El Cliente 4 en espera
+El Cliente 5 en espera
+El Cliente 6 en espera
+El Cliente 7 en espera
+El Cliente 3 en espera
+El Cliente 9 en espera
+El Cliente 8 en espera
+El Cliente 1 esperando a que la silla esté libre
+El barbero ha acabado de cortar el pelo
+El Cliente 1 se está pelando
+El Cliente 2 esperando a que la silla esté libre
+El barbero ha acabado de cortar el pelo
+El Cliente 2 se está pelando
+El Cliente 0 esperando a que la silla esté libre
+El barbero ha acabado de cortar el pelo
+El Cliente 0 se está pelando
+El Cliente 4 esperando a que la silla esté libre

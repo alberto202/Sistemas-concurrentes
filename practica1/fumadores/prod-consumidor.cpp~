@@ -1,0 +1,44 @@
+#include <iostream>
+#include <cassert>
+#include <pthread.h>
+#include <semaphore.h>
+#include <time.h>      
+#include <unistd.h>    
+#include <stdlib.h>    
+
+using namespace std;
+
+const unsigned int tam_vector = 10;
+int producir_dato()
+{
+    static int contador= 1 ;
+    return contador++ ;
+}
+
+void consumir_dato(int dato )
+{
+    cout << "dato recibido: "<< dato << endl ;
+}
+
+void * producto (void * )
+{
+    for (unsigned i = 0; i<num_items; i++)
+    {
+        int dato = producir_dato();
+        //falta: insertar "dato" en el vector
+    }
+
+    return NULL;
+}
+
+void * consumidor (void *)
+{
+    for(unsigned i = 0; i < num_items; i++)
+    {
+        int dato;
+        //falta leer "dato" desde el vector intermedio
+        consumir_dato( dato );
+    }
+
+    return NULL;
+}

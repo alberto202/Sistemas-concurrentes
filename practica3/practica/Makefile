@@ -1,0 +1,25 @@
+.SUFFIXES:
+.PHONY:    pc,pc2,f,clean
+
+compilador := mpicxx
+flagsc     := -g -Wall 
+
+pc: prodcons
+	mpirun -np  3 ./prodcons
+
+pc2: prodcons2
+	mpirun -np  3 ./prodcons2
+
+pc3: prodcons3
+	mpirun -np  10 ./prodcons3
+
+f: filosofos
+	mpirun -np 10 ./filosofos
+
+c: camarero
+	mpirun -np 10 ./camarero
+%: %.cpp
+	$(compilador) $(flagsc) -o $@ $<
+
+clean:
+	rm -f prodcons prodcons2 prodcons3 filosofos camarero
